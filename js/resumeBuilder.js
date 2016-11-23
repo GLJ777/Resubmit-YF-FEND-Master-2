@@ -11,7 +11,7 @@ var bio = {
 
     "welcomeMessage": " Welcome to the super Analyst's resume!",
     "skills": ["Result-Oriented", "Determination", "Adaptability", "Reliability"],
-    "bioPic": "images/fry.jpg"
+    "biopic": "images/fry.jpg"
 };
 
 
@@ -20,14 +20,14 @@ var education = {
         "name": "Access Institute of Technology",
         "location": "Atlanta, GA",
         "degree": "MS Office Certificate",
-        "majors": "MS Office applications",
+        "majors": ["MS Access", "MS Excel"],
         "dates": "2005 – 2006",
         "url": "https://www.dkit.ie/access-office"
     }, {
         "name": "University of Western Ontario",
         "location": "London, Ontario",
         "degree": "Bachelor of Science",
-        "majors": "Biology",
+        "majors": ["Biology", "Chemistry"],
         "dates": "2004 – 2006",
         "url": "https://www.uwo.ca"
     }],
@@ -120,7 +120,6 @@ education.display = function() {
 
     education.schools.forEach(function(school) {
         $("#education").append(HTMLschoolStart);
-        //var formattedName = HTMLschoolName.replace("%data%", school.name);
         var formattedName = HTMLschoolName.replace("%data%", school.name).replace('#', school.url);
         var formattedDegree = HTMLschoolDegree.replace("%data%", school.degree);
         var formattedNameDegree = formattedName + formattedDegree;
